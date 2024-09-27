@@ -1,6 +1,10 @@
+<p align="center">
+  <img src="green-lossless-spmv-logo.svg" alt="The Green Lossless SpMV" style="width: 300px">
+</p>
+
 # Green Lossless SpMV
 
-This project focuses on efficient sparse matrix-vector multiplication (SpMV) using lossless compression techniques.
+The Green Lossless Sparse Matrix-Vector Multiplication (SpMV) is a project focusing on lossless compression techniques for binary or ternary matrix formats and real-valued vectors.
 
 ## Getting Started
 
@@ -33,9 +37,7 @@ TODO
 
 ## License
 
-This project is licensed under the terms of the Apache License 2.0.
-
-The logo [`green-lossless-spmv-logo.svg`](./green-lossless-spmv-logo.svg) is a derivative work of the file [Fluent Emoji flat 1f342.svg](https://commons.wikimedia.org/wiki/File:Fluent_Emoji_flat_1f342.svg) distributed under the MIT License.
+This project is licensed under the terms of the Apache License 2.0. The logo [`green-lossless-spmv-logo.svg`](./green-lossless-spmv-logo.svg) is a derivative work of the file [Fluent Emoji flat 1f342.svg](https://commons.wikimedia.org/wiki/File:Fluent_Emoji_flat_1f342.svg) distributed under the MIT License.
 
 If you use the library please cite the following paper:
 

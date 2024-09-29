@@ -1,7 +1,7 @@
 import os, sys
 from datetime import datetime
 
-BUILD_DIR = "cmake-build-debug"
+BUILD_DIR = "build"
 DATA_PATH = "/data/matrix/mtx"
 
 # plain

@@ -2,7 +2,7 @@ import os, sys
 from datetime import datetime
 
 BUILD_DIR = "build"
-DATA_PATH = "/data/matrix/mtx"
+DATA_PATH = "/data/matrix/mtx2"
 
 # plain
 PLAIN_PR = f"{BUILD_DIR}/rmult_plain"
@@ -16,16 +16,8 @@ ZKR_PR_PT = f"{ZKR_BUILD_DIR}/pageranker_pthread"
 # kt
 KT_DIR = 'k2tree_basic_v0.1'
 KT_BUILD_DIR = f'{BUILD_DIR}/k2tree_basic_v0.1'
-KT_PR = f"{KT_BUILD_DIR}/pagerank"
-KT_PR_PT = f"{KT_BUILD_DIR}/pagerank_pthread"
 KTRD_PR = f"{KT_BUILD_DIR}/pagerank_rd"
 KTRD_PR_PT = f"{KT_BUILD_DIR}/pagerank_pthread_rd"
-
-# ktgn
-KTGN_DIR = 'matrix_gn'
-KTGN_BUILD_DIR = f'{BUILD_DIR}/{KTGN_DIR}'
-KTGN_PR = f'{KTGN_BUILD_DIR}/pagerank_gn'
-KTGN_PR_PT = f'{KTGN_BUILD_DIR}/pagerank_gn_pthread'
 
 # mmr
 MMR_DIR = 'mm-repair/pagerank'
@@ -36,6 +28,8 @@ PREAMBLE = "/usr/bin/time -f%e:%M perf stat -a -e L1-dcache-loads,L1-dcache-load
 
 datasets = [
     ('enron', 69244),
+]
+"""
     ('cnr-2000', 325557),
     ('dblp-2010', 326186),
     ('amazon-2008', 735323),
@@ -49,8 +43,8 @@ datasets = [
     ('arabic-2005', 22744080),
     ('uk-2005', 39459925),
     ('it-2004', 41291594),
-
 ]
+"""
 
 def check_exist(infilepath):
     if not os.path.exists(infilepath):
@@ -58,7 +52,7 @@ def check_exist(infilepath):
         exit(1)
     return
 
-def start_exp(pause=1) :
+def start_exp(pause=3) :
     os.system(f'sleep {pause}')
     print('\nstart', datetime.now().timestamp(), file=sys.stderr)
     return
@@ -71,7 +65,7 @@ topk = 5
 def main(pardegrees) :
     t = 't'
 
-    for enc in [ZKR_PR, ZKR_PR_PT, MMR_PR, KT_PR, KT_PR_PT, KTGN_PR, KTGN_PR_PT, KTRD_PR, KTRD_PR_PT] :
+    for enc in [ZKR_PR, ZKR_PR_PT, MMR_PR, KTRD_PR, KTRD_PR_PT] :
         check_exist(enc)
     for data,nnodes in datasets:
         check_exist(f'{DATA_PATH}/{data}.mtx.ccount')
@@ -110,7 +104,6 @@ def main(pardegrees) :
 
             #k²-tree (UDC) - rank: disabled
             start_exp()
-            check_exist(f'{DATA_PATH}/{data}.{t}.ktrd')
             vopt = '-v' if verbose else ''
             if pardegree==1 :
                 os.system(f'{PREAMBLE} {KTRD_PR}    {vopt}                -m {maxiter} -d {dampf} -k {topk} {DATA_PATH}/{data}.{t} {DATA_PATH}/{data}.mtx.ccount')

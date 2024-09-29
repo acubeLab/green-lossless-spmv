@@ -1,7 +1,7 @@
 import os, sys
 
 BUILD_DIR = "build"
-DATA_PATH = "/data/matrix/mtx"
+DATA_PATH = "/data/matrix/mtx2"
 
 # zkr
 ZKR_DIR = "zuckerli"
@@ -21,6 +21,8 @@ MMR_COUNT = f'{MMR_DIR}/pagerank/mtx2rowm'
 
 datasets = [
     ('enron', 69244),
+]
+"""
     ('cnr-2000', 325557),
     ('dblp-2010', 326186),
     ('amazon-2008', 735323),
@@ -35,6 +37,7 @@ datasets = [
     ('uk-2005', 39459925),
     ('it-2004', 41291594),
 ]
+"""
     
 def check_exist(infilepath, abort=True):
     if not os.path.exists(infilepath):
@@ -57,12 +60,12 @@ def main(pardegrees) :
 
         print(f"Transposing {data} (1-based)")
         check_exist(f'{DATA_PATH}/{data}.{ext}')
-        os.system(f"python3 util/transpose_mtx.py {DATA_PATH}/{data}.{ext}")
+        os.system(f"python3 utils/transpose_mtx.py {DATA_PATH}/{data}.{ext}")
         check_exist(f'{DATA_PATH}/{data}.t.{ext}')
 
         print(f"Converting {data}.t.{ext} → {data}.t.graph-txt")
         check_exist(f'{DATA_PATH}/{data}.t.{ext}')
-        os.system(f"python3 util/edges2graph-txt.py {DATA_PATH}/{data}.t.{ext} {DATA_PATH}/{data}.t.graph-txt")
+        os.system(f"python3 utils/edges2graph-txt.py {DATA_PATH}/{data}.t.{ext} {DATA_PATH}/{data}.t.graph-txt")
         check_exist(f'{DATA_PATH}/{data}.t.graph-txt')
         
 
@@ -98,7 +101,7 @@ def main(pardegrees) :
                 
                 print(f"Splitting {data}.t.graph-txt in {pardegree} parts")
                 check_exist(f'{DATA_PATH}/{data}.t.graph-txt')
-                os.system(f"python3 util/split_graph-txt.py {DATA_PATH}/{data}.t.graph-txt {pardegree}")
+                os.system(f"python3 utils/split_graph-txt.py {DATA_PATH}/{data}.t.graph-txt {pardegree}")
                 for tid in range(pardegree) :
                     check_exist(f'{DATA_PATH}/{data}.t.{pardegree}.{tid}.graph-txt')
 

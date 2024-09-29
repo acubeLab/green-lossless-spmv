@@ -117,16 +117,6 @@ def main(pardegrees) :
             else :
                 os.system(f'{PREAMBLE} {KTRD_PR_PT} {vopt} -b {pardegree} -m {maxiter} -d {dampf} -k {topk} {DATA_PATH}/{data}.{t} {DATA_PATH}/{data}.mtx.ccount')
 
-            """
-            #k²-tree (UChile)
-            start_exp()
-            check_exist(f'{DATA_PATH}/{data}.mtx.1.0.ktgn')
-            vopt = '-v' if verbose else ''
-            if pardegree==1 :
-                os.system(f'{PREAMBLE} {KTGN_PR}    {vopt}                -m {maxiter} -d {dampf} -k {topk} {DATA_PATH}/{data}.mtx ')
-            else :
-                os.system(f'{PREAMBLE} {KTGN_PR_PT} {vopt} -b {pardegree} -m {maxiter} -d {dampf} -k {topk} {DATA_PATH}/{data}.mtx ')"""
-
             #mm-repair
             for algo in ['csrv', 're32', 'reiv', 're'] :
                 start_exp()

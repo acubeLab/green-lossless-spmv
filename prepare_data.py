@@ -1,6 +1,6 @@
 import os, sys
 
-BUILD_DIR = "cmake-build-debug"
+BUILD_DIR = "build"
 DATA_PATH = "/data/matrix/mtx"
 
 # zkr
@@ -49,7 +49,6 @@ def main(pardegrees) :
     ext = 'mtx'
     for data,nnodes in datasets:
         
-        """
         print(f"Transposing {data} (0-based, for mm-repair)")
         check_exist(f'{DATA_PATH}/{data}.{ext}')
         os.system(f"{MMR_COUNT} {DATA_PATH}/{data}.{ext}")
@@ -65,17 +64,9 @@ def main(pardegrees) :
         check_exist(f'{DATA_PATH}/{data}.t.{ext}')
         os.system(f"python3 util/edges2graph-txt.py {DATA_PATH}/{data}.t.{ext} {DATA_PATH}/{data}.t.graph-txt")
         check_exist(f'{DATA_PATH}/{data}.t.graph-txt')
-        """
         
 
         for pardegree in pardegrees :
-
-            if pardegree>1 :
-                print(f"Splitting {data}.t.graph-txt in {pardegree} parts")
-                check_exist(f'{DATA_PATH}/{data}.t.graph-txt')
-                os.system(f"python3 util/split_graph-txt.py {DATA_PATH}/{data}.t.graph-txt {pardegree}")
-                for tid in range(pardegree) :
-                    check_exist(f'{DATA_PATH}/{data}.t.{pardegree}.{tid}.graph-txt')
 
             if pardegree == 1 :
                 
@@ -103,8 +94,14 @@ def main(pardegrees) :
                 os.system(f"{KTRD_ENC} {DATA_PATH}/{data}.t")
                 check_exist(f'{DATA_PATH}/{data}.t.ktrd')
 
-            else :
+            else : # pardegree > 1
                 
+                print(f"Splitting {data}.t.graph-txt in {pardegree} parts")
+                check_exist(f'{DATA_PATH}/{data}.t.graph-txt')
+                os.system(f"python3 util/split_graph-txt.py {DATA_PATH}/{data}.t.graph-txt {pardegree}")
+                for tid in range(pardegree) :
+                    check_exist(f'{DATA_PATH}/{data}.t.{pardegree}.{tid}.graph-txt')
+
                 print(f"Preparing mm-repair format for {data}")
                 check_exist(f'{DATA_PATH}/{data}.mtx.rowm')
                 os.system(f"{MMR_ENC} -p {pardegree} -b {pardegree} --bool -r {DATA_PATH}/{data}.mtx.rowm {nnodes} {nnodes}")

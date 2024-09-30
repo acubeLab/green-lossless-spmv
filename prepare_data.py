@@ -38,6 +38,12 @@ datasets = [
     ('it-2004', 41291594),
 ]
 """
+
+# possibly overrides DATA_PATH and datasets
+if os.path.exists("datasets.py"):
+    exec(open("datasets.py").read())
+
+
     
 def check_exist(infilepath, abort=True):
     if not os.path.exists(infilepath):

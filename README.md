@@ -73,10 +73,18 @@ This project is licensed under the terms of the Apache License 2.0. The logo [`g
 
 If you use the library please cite the following paper:
 
-> Francesco Tosoni and  .....
+> Francesco Tosoni, Philip Bille, Valerio Brunacci, Alessio De Angelis, Paolo Ferragina, and Giovanni Manzini. Toward Greener Matrix Operations by Lossless Compressed Formats. arXiv preprint arXiv:2409.18620, 2024. Available at: https://arxiv.org/abs/2409.18620.
 
 ```tex
-@article{???}
+@misc{tosoni2024greenermatrixoperationslossless,
+      title={Toward Greener Matrix Operations by Lossless Compressed Formats}, 
+      author={Francesco Tosoni and Philip Bille and Valerio Brunacci and Alessio De Angelis and Paolo Ferragina and Giovanni Manzini},
+      year={2024},
+      eprint={2409.18620},
+      archivePrefix={arXiv},
+      primaryClass={cs.DS},
+      url={https://arxiv.org/abs/2409.18620}, 
+}
 ```
 
 ## Acknowledgments

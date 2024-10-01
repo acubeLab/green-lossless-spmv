@@ -16,7 +16,8 @@ sudo apt install clang libgtest-dev libgmock-dev
 
 ### Download Datasets
 
-Visit [this link](https://sparse.tamu.edu/LAW) and download all relevant datasets in Matrix Market format (.mtx extension).
+Visit [this link](https://sparse.tamu.edu/LAW) and download all relevant datasets in Matrix Market format. Extract the files with the .mtx extension with the `tar -xzf` command.
+
 
 ### Building the Project
 
@@ -42,25 +43,27 @@ cd mm-repair && make -j 12 && cd ..
 
 ### Compress the datasets
 
-Modify `prepare_data.py` to set `DATA_PATH` to the path where the datasets in `.mtx` format are stored.
-Then, to prepare the compressed matrix formats, run the following command where the options represent the parallelism degree:
+To prepare the compressed matrix formats, run the following command where the options represent the parallelism degree:
 ```sh
 python3 prepare_data.py 1 8 16
 ```
 In the above example, we prepare matrix formats for 1, 8, and 16 threads.
 
+By default the script compresses teh dataset `enron.mtx` in the `example` directory. To define a different dataset creates a `datasets.py` file containing the definition of `DATA_PATH` and of the list of `.mtx` files. See `sample_datasets.py` for an example. 
+
+
 ### Execute Pagerank
 Modify `pagerank.py` to set `DATA_PATH` to the path where the datasets in `.mtx` format are stored.
 Then, run `pagerank.py`.
 ```sh
-python3 prepare_data.py 1 8 16
+python3 pagerank.py 1 8 16
 ```
 
 ### Extracting statistics to a CSV
 
 To extract statistics from the PageRank log, first redirect the output of `pagerank.py` to a log.
 ```sh
-python3 prepare_data.py 1 8 16 &> out.log
+python3 pagerank.py 1 8 16 &> out.log
 ```
 Then, run `extract_stats.py` passing the name of the log file as parameter. This will produce a CSV file `out.csv` with metrics extracted from `out.log`.
 ```sh
@@ -90,4 +93,4 @@ If you use the library please cite the following paper:
 ## Acknowledgments
 
 - Thanks to the contributors and the open-source community.
-- Special thanks to the [LAW group](https://sparse.tamu.edu/LAW) for providing the datasets.
+- Special thanks to the [LAW group](https://law.di.unimi.it/) and the [SuiteSparse Matrix Collection](https://sparse.tamu.edu/) for providing the datasets.

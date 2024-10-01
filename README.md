@@ -16,7 +16,7 @@ sudo apt install clang libgtest-dev libgmock-dev
 
 ### Download Datasets
 
-Visit [this link](https://sparse.tamu.edu/LAW) and download all relevant datasets in Matrix Market format. Extract the files with the .mtx extension with the `tar -xzf` command.
+Visit [this link](https://sparse.tamu.edu/LAW) and download all relevant datasets in Matrix Market format. Extract the files with the `.mtx` extension with the `tar -xzf` command.
 
 
 ### Building the Project
@@ -43,25 +43,26 @@ cd mm-repair && make -j 12 && cd ..
 
 ### Compress the datasets
 
-To prepare the compressed matrix formats, run the following command where the options represent the parallelism degree:
+To prepare the compressed matrix formats, run the following command where the arguments represent the parallelism degree:
 ```sh
 python3 prepare_data.py 1 8 16
 ```
 In the above example, we prepare matrix formats for 1, 8, and 16 threads.
 
-By default the script compresses teh dataset `enron.mtx` in the `example` directory. To define a different dataset creates a `datasets.py` file containing the definition of `DATA_PATH` and of the list of `.mtx` files. See `sample_datasets.py` for an example. 
+By default the script compresses the matrix `enron.mtx` in the `example` directory. To define a different dataset create a `datasets.py` file containing the appropriate definition of the directory `DATA_PATH` and of the list of `.mtx` files. See `sample_datasets.py` for an example. 
 
 
 ### Execute Pagerank
-Modify `pagerank.py` to set `DATA_PATH` to the path where the datasets in `.mtx` format are stored.
-Then, run `pagerank.py`.
+
+
+Run `pagerank.py` passing as arguments the number of threads: 
 ```sh
 python3 pagerank.py 1 8 16
 ```
 
 ### Extracting statistics to a CSV
 
-To extract statistics from the PageRank log, first redirect the output of `pagerank.py` to a log.
+To extract statistics from the PageRank log, redirect the output of `pagerank.py` to a log.
 ```sh
 python3 pagerank.py 1 8 16 &> out.log
 ```

@@ -1,7 +1,7 @@
 import os, sys
 
 BUILD_DIR = "build"
-DATA_PATH = "/data/matrix/mtx2"
+DATA_PATH = "example"
 
 # zkr
 ZKR_DIR = "zuckerli"

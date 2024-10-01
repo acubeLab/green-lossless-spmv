@@ -2,7 +2,7 @@ import os, sys
 from datetime import datetime
 
 BUILD_DIR = "build"
-DATA_PATH = "/data/matrix/mtx2"
+DATA_PATH = "example"
 
 # plain
 PLAIN_PR = f"{BUILD_DIR}/rmult_plain"

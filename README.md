@@ -57,8 +57,18 @@ By default the script compresses the matrix `enron.mtx` in the `example` directo
 
 Run `pagerank.py` passing as arguments the number of threads: 
 ```sh
-python3 pagerank.py 1 8 16
+sudo python3 pagerank.py 1 8 16
 ```
+Note: This script utilizes perf, which requires sudo privileges. Before executing `pagerank.py`, please verify the available energy events for RAPL on your machine. You can check the energy events by running either:
+```bash
+ls /sys/bus/event_source/devices/power/events
+```
+or
+```bash
+sudo perf list | grep energy
+```
+
+By default, the script reports `power/energy-pkg/` (energy consumption at the socket level) and `power/energy-ram/` (energy used by the RAM). These events were measurable on our machine. However, on other machines, you may find `power/energy-cpu/` (energy consumption at the CPU level) available. If this is the case, we recommend modifying the `PREAMBLE` global variable in the `pagerank.py` script accordingly.
 
 ### Extracting statistics to a CSV
 
@@ -70,6 +80,35 @@ Then, run `extract_stats.py` passing the name of the log file as parameter. This
 ```sh
 python3 extract_stats.py out.log
 ```
+
+The `out.csv` file contains the following columns:
+
+* `DATASET`: The name of the dataset.
+* `START`: The timestamp indicating when the algorithm commenced.
+* `ALGO`: The compression algorithm used.
+* `PARDEGREE`: The degree of parallelism, i.e., the number of active threads.
+* `MAXITER`: The total number of PageRank iterations performed.
+* `DAMPF`: The damping factor used in PageRank.
+* `TOPK`: The number of highest-scoring vertices included in the PageRank output.
+* `NNODES`: The total number of vertices in the input graph.
+* `NDANGLING`: The number of dangling nodes in the input graph.
+* `NEDGES`: The total number of edges in the input graph.
+* `SUM`: The sum of PageRank values (should equal 1).
+* `L1DCL`: The number of L1 data cache loads (including both hits and misses).
+* `L1DCLM`: The number of L1 data cache load misses.
+* `L1DCS`: The number of L1 data cache stores.
+* `LLCL`: The number of last-level cache loads (including both hits and misses).
+* `LLCLM`: The number of last-level cache load misses.
+* `LLCS`: The number of last-level cache stores.
+* `CYCLES`: The total number of clock cycles.
+* `INSTR`: The total number of instructions executed.
+* `ENERGY_PKG`: The energy consumption at the socket level, as measured by RAPL.
+* `ENERGY_CORES`: The energy consumption at the core level, as measured by RAPL.
+* `ENERGY_RAM`: The energy consumption at the RAM level, as measured by RAPL.
+* `ELAPSED`: The total completion time.
+* `PMU`: The peak memory usage in kilobytes.
+* `DISK`: The disk space used, measured in bytes.
+
 
 ## Licence
 

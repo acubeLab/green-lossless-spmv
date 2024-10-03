@@ -68,7 +68,7 @@ or
 sudo perf list | grep energy
 ```
 
-By default, the script reports `power/energy-pkg/` (energy consumption at the socket level) and `power/energy-ram/` (energy used by the RAM). These events were measurable on our machine. However, on other machines, you may find `power/energy-cpu/` (energy consumption at the CPU level) available. If this is the case, we recommend modifying the `PREAMBLE` global variable in the `pagerank.py` script accordingly.
+By default, the script reports `power/energy-pkg/` (energy consumption at the package level) and `power/energy-ram/` (energy used by the RAM). These events were measurable on our machine. However, on other machines, you may find `power/energy-cpu/` (energy consumption at cores level) available. If this is the case, we recommend modifying the `PREAMBLE` global variable in the `pagerank.py` script accordingly.
 
 ### Extracting statistics to a CSV
 

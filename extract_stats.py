@@ -1,16 +1,18 @@
 import os, re, sys
 
-logdir = '/data/matrix/mtx'
-datadir = '/data/matrix/mtx'
+datadir = 'example'  # Path to the current data directory 
+logdir = 'example'  # Path to the data directory used when the tests were launched (often the same as data_dir)
+
+builddir = 'build'
 
 re_start = 'start\s+([0-9]+.[0-9]+)'
 
 re_title = '==== Command line:'
 
-re_zkr = f'\s*cmake-build-debug\/zuckerli\/pageranker(_pthread)? --verbose=1 --maxiter=([0-9]+) --dampf=([0-9]+.[0-9]+) --topk=([0-9]+) --input_path={logdir}\/(.+).t(.zkr)? --ccount_path={logdir}\/(.+).mtx.ccount(\s*--pardegree=([0-9]+))?'
-re_k2t = f'\s*cmake-build-debug\/k2tree_basic_v0.1\/pagerank(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).t {logdir}\/(.+).mtx.ccount'
-re_k2trd = f'\s*cmake-build-debug\/k2tree_basic_v0.1\/pagerank(_pthread)?_rd -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).t {logdir}\/(.+).mtx.ccount'
-re_k2tgn = f'\s*cmake-build-debug\/matrix_gn\/pagerank_gn(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx'
+re_zkr = f'\s*{builddir}\/zuckerli\/pageranker(_pthread)? --verbose=1 --maxiter=([0-9]+) --dampf=([0-9]+.[0-9]+) --topk=([0-9]+) --input_path={logdir}\/(.+).t(.zkr)? --ccount_path={logdir}\/(.+).mtx.ccount(\s*--pardegree=([0-9]+))?'
+re_k2t = f'\s*{builddir}\/k2tree_basic_v0.1\/pagerank(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).t {logdir}\/(.+).mtx.ccount'
+re_k2trd = f'\s*{builddir}\/k2tree_basic_v0.1\/pagerank(_pthread)?_rd -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).t {logdir}\/(.+).mtx.ccount'
+re_k2tgn = f'\s*{builddir}\/matrix_gn\/pagerank_gn(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx'
 re_csrv = f'\s*mm-repair\/pagerank\/csrvpagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx.rowm {logdir}\/(.+).mtx.ccount'
 re_re32 = f'\s*mm-repair\/pagerank\/re32pagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx.rowm {logdir}\/(.+).mtx.ccount'
 re_reiv = f'\s*mm-repair\/pagerank\/reivpagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx.rowm {logdir}\/(.+).mtx.ccount'
@@ -71,9 +73,9 @@ def main(sep=',') :
     outfilepath = infilepath[:-4]+'.csv'
     outfile = open(outfilepath, 'w')
 
-    dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk, current_integral = [None for _ in range(26)]
+    dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk = [None for _ in range(25)]
 
-    header = 'DATASET,START,ALGO,PARDEGREE,MAXITER,DAMPF,TOPK,NNODES,NDANGLING,NEDGES,SUM,L1DCL,L1DCLM,L1DCS,LLCL,LLCLM,LLCS,CYCLES,INSTR,ENERGY_PKG,ENERGY_CORES,ENERGY_RAM,ELAPSED,PMU,DISK,CURRENT_INTEGRAL'
+    header = 'DATASET,START,ALGO,PARDEGREE,MAXITER,DAMPF,TOPK,NNODES,NDANGLING,NEDGES,SUM,L1DCL,L1DCLM,L1DCS,LLCL,LLCLM,LLCS,CYCLES,INSTR,ENERGY_PKG,ENERGY_CORES,ENERGY_RAM,ELAPSED,PMU,DISK'
 
     outfile.write(header)
     outfile.write('\n')
@@ -85,9 +87,9 @@ def main(sep=',') :
         if res :
             print('debug', dataset, pardegree, algo)
             if dataset is not None :
-                outfile.write(sep.join([str(x) for x in [dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk, current_integral]]))
+                outfile.write(sep.join([str(x) for x in [dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk]]))
                 outfile.write('\n')
-            dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk, current_integral = [None for _ in range(26)]
+            dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk = [None for _ in range(25)]
 
             start = res.group(1)
 
@@ -116,24 +118,6 @@ def main(sep=',') :
                 for tid in range(pardegree) :
                     disk += file_size(datadir, f'{dataset}.t.{pardegree}.{tid}.zkr')
 
-        #k²-tree (UDC)
-        res = re.search(re_k2t, line)
-        if res :
-            algo = 'k2t'
-            pardegree = int(res.group(3)) if res.group(3) else 1
-            maxiter = res.group(4)
-            dampf = res.group(5)
-            topk = res.group(6)
-            dataset = res.group(7)
-            assert(dataset == res.group(8))
-
-            disk = 0
-            if pardegree == 1 :
-                disk += file_size(datadir, f'{dataset}.t.kt')
-            else :
-                for tid in range(pardegree) :
-                    disk += file_size(datadir, f'{dataset}.t.{pardegree}.{tid}.kt')
-
         #k²-tree (UDC) -- rank: disabled
         res = re.search(re_k2trd, line)
         if res :
@@ -151,20 +135,6 @@ def main(sep=',') :
             else :
                 for tid in range(pardegree) :
                     disk += file_size(datadir, f'{dataset}.t.{pardegree}.{tid}.ktrd')
-
-        #k²-tree (UChile)
-        res = re.search(re_k2tgn, line)
-        if res :
-            algo = 'k2tgn'
-            pardegree = int(res.group(3)) if res.group(3) else 1
-            maxiter = res.group(4)
-            dampf = res.group(5)
-            topk = res.group(6)
-            dataset = res.group(7)
-
-            disk = 0
-            for tid in range(pardegree) :
-                disk += file_size(datadir, f'{dataset}.mtx.{pardegree}.{tid}.ktgn')
 
         #csrv
         res = re.search(re_csrv, line)
@@ -326,7 +296,7 @@ def main(sep=',') :
             
     #end
     if dataset is not None :
-        outfile.write(sep.join([str(x) for x in [dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk, current_integral]]))
+        outfile.write(sep.join([str(x) for x in [dataset, start, algo, pardegree, maxiter, dampf, topk, nnodes, ndangling, nedges, sum, l1dcl, l1dclm, l1dcs, llcl, llclm, llcs, cycles, instr, energy_pkg, energy_cores, energy_ram, elapsed, pmu, disk]]))
         outfile.write('\n')
     return
 

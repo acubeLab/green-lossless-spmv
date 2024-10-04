@@ -117,7 +117,7 @@ The `out.csv` file contains the following columns:
 * `DISK`: The disk space used, measured in bytes.
 
 
-## Licence
+## License
 
 This project is licensed under the terms of the Apache License 2.0. The logo [`green-lossless-spmv-logo.svg`](./green-lossless-spmv-logo.svg) is a derivative work of the file [Fluent Emoji flat 1f342.svg](https://commons.wikimedia.org/wiki/File:Fluent_Emoji_flat_1f342.svg) distributed under the MIT License.
 

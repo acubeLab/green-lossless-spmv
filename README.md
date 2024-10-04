@@ -55,7 +55,7 @@ python3 prepare_data.py 1 8 16
 ```
 In the above example, we prepare matrix formats for 1, 8, and 16 threads.
 
-By default the script compresses the matrix `enron.mtx` in the `example` directory. To define a different dataset create a `datasets.py` file containing the appropriate definition of the directory `DATA_PATH` and of the list of `.mtx` files. See `sample_datasets.py` for an example. 
+By default the script compresses the matrix `cnr-2000.mtx` in the `example` directory. To define a different dataset create a `datasets.py` file containing the appropriate definition of the directory `DATA_PATH` and of the list of `.mtx` files. See `sample_datasets.py` for an example. 
 
 
 ### Execute Pagerank

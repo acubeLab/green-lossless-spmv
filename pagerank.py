@@ -1,8 +1,18 @@
 import os, sys
 from datetime import datetime
 
-BUILD_DIR = "build"
 DATA_PATH = "example"
+
+datasets = [('cnr-2000', 325557)]
+
+# possibly overrides DATA_PATH and datasets
+if os.path.exists("datasets.py"):
+    exec(open("datasets.py").read())
+
+#ls /sys/bus/event_source/devices/power/events
+PREAMBLE = "/usr/bin/time -f%e:%M perf stat -a -e L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores,LLC-loads,LLC-load-misses,LLC-stores,cycles,instructions,power/energy-pkg/,power/energy-ram/ "
+
+BUILD_DIR = "build"
 
 # plain
 PLAIN_PR = f"{BUILD_DIR}/rmult_plain"
@@ -23,28 +33,7 @@ KTRD_PR_PT = f"{KT_BUILD_DIR}/pagerank_pthread_rd"
 MMR_DIR = 'mm-repair/pagerank'
 MMR_PR = 'mm-repair/pagerank/repagerank'
 
-#ls /sys/bus/event_source/devices/power/events
-PREAMBLE = "/usr/bin/time -f%e:%M perf stat -a -e L1-dcache-loads,L1-dcache-load-misses,L1-dcache-stores,LLC-loads,LLC-load-misses,LLC-stores,cycles,instructions,power/energy-pkg/,power/energy-ram/ "
 
-datasets = [
-    ('enron', 69244),
-]
-"""
-    ('cnr-2000', 325557),
-    ('dblp-2010', 326186),
-    ('amazon-2008', 735323),
-    ('eu-2005', 862664),
-    ('hollywood-2009', 1139905),
-    ('in-2004', 1382908),
-    ('ljournal-2008', 5363260),
-    ('indochina-2004', 7414866),
-
-    ('uk-2002', 18520486),
-    ('arabic-2005', 22744080),
-    ('uk-2005', 39459925),
-    ('it-2004', 41291594),
-]
-"""
 
 def check_exist(infilepath):
     if not os.path.exists(infilepath):

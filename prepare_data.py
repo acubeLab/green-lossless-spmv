@@ -1,7 +1,16 @@
 import os, sys
 
-BUILD_DIR = "build"
+
 DATA_PATH = "example"
+
+datasets = [('cnr-2000', 325557)]
+
+# possibly overrides DATA_PATH and datasets
+if os.path.exists("datasets.py"):
+    exec(open("datasets.py").read())
+
+
+BUILD_DIR = "build"
 
 # zkr
 ZKR_DIR = "zuckerli"
@@ -18,31 +27,6 @@ KTRD_ENC = f'{KT_BUILD_DIR}/build_tree_rd'
 MMR_DIR = 'mm-repair'
 MMR_ENC = f'{MMR_DIR}/matrepair'
 MMR_COUNT = f'{MMR_DIR}/pagerank/mtx2rowm'
-
-datasets = [
-    ('enron', 69244),
-]
-"""
-    ('cnr-2000', 325557),
-    ('dblp-2010', 326186),
-    ('amazon-2008', 735323),
-    ('eu-2005', 862664),
-    ('hollywood-2009', 1139905),
-    ('in-2004', 1382908),
-    ('ljournal-2008', 5363260),
-    ('indochina-2004', 7414866),
-
-    ('uk-2002', 18520486),
-    ('arabic-2005', 22744080),
-    ('uk-2005', 39459925),
-    ('it-2004', 41291594),
-]
-"""
-
-# possibly overrides DATA_PATH and datasets
-if os.path.exists("datasets.py"):
-    exec(open("datasets.py").read())
-
 
     
 def check_exist(infilepath, abort=True):

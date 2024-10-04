@@ -11,7 +11,13 @@ The **Green Lossless Sparse Matrix-Vector Multiplication** (SpMV) project focuse
 Ensure you have the following dependencies installed:
 
 ```sh
-sudo apt install clang libgtest-dev libgmock-dev
+sudo apt install clang libgtest-dev libgmock-dev 
+```
+
+To install `perf`, run:
+
+```sh
+sudo apt install linux-tools-common linux-tools-generic linux-tools-`uname -r`
 ```
 
 ### Download Datasets
@@ -59,7 +65,7 @@ Run `pagerank.py` passing as arguments the number of threads:
 ```sh
 python3 pagerank.py 1 8 16
 ```
-Note: To eliminate the need to run `pagerank.py` as a superuser, consider adjusting the `/proc/sys/kernel/perf_event_paranoid` setting to permit access to performance monitoring and observability operations. Lower integer values allow non-superusers to collect more events. To execute pagerank.py, you will need to set `perf_event_paranoid` to 0 or a lower value.
+Note: In the background, `pagerank.py` utilizes the `perf` tool to monitor cache accesses, clock cycles, instructions, and more. Typically, this requires executing the script with superuser privileges. To eliminate the need to run `pagerank.py` as a superuser, consider adjusting the `/proc/sys/kernel/perf_event_paranoid` setting to permit access to performance monitoring and observability operations. Lower integer values allow non-superusers to collect more events. To execute `pagerank.py`, you will need to set `perf_event_paranoid` to 0 or a lower value.
 Additionally, please verify the available energy events for RAPL on your machine. You can check the energy events by running either:
 ```bash
 ls /sys/bus/event_source/devices/power/events

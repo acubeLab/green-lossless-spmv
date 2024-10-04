@@ -2,9 +2,10 @@
 DATA_PATH = "/data/matrix/mtx2"
 
 # datasets in the format: (file_name, matrix_size)
-# in a .mtx matrix the first line not starting with % contains the triplet
+# in a .mtx matrix file the first line not starting with % contains the triplet
 #   rows columns nonzeros
-#  
+# pagerank is defined for square matrices so rows and columns must be equal and 
+# matrix_size coincides with the number of rows and columns  
 datasets = [
     ('eu-2005', 862664),
     ('hollywood-2009', 1139905),

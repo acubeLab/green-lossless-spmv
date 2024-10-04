@@ -63,7 +63,7 @@ By default the script compresses the matrix `cnr-2000.mtx` in the `example` dire
 
 Run `pagerank.py` passing as arguments the number of threads: 
 ```sh
-python3 pagerank.py 1 8 16
+[sudo] python3 pagerank.py 1 8 16
 ```
 Note: In the background, `pagerank.py` utilizes the `perf` tool to monitor cache accesses, clock cycles, instructions, and more. Typically, this requires executing the script with superuser privileges. To eliminate the need to run `pagerank.py` as a superuser, consider adjusting the `/proc/sys/kernel/perf_event_paranoid` setting to permit access to performance monitoring and observability operations. Lower integer values allow non-superusers to collect more events. To execute `pagerank.py`, you will need to set `perf_event_paranoid` to 0 or a lower value.
 Additionally, please verify the available energy events for RAPL on your machine. You can check the energy events by running either:
@@ -81,7 +81,7 @@ By default, the script reports `power/energy-pkg/` (energy consumption at the pa
 
 To extract statistics from the PageRank log, redirect the output of `pagerank.py` to a log.
 ```sh
-python3 pagerank.py 1 8 16 &> out.log
+[sudo] python3 pagerank.py 1 8 16 &> out.log
 ```
 Then, run `extract_stats.py` passing the name of the log file as parameter. This will produce a CSV file `out.csv` with metrics extracted from `out.log`.
 ```sh

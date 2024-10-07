@@ -1,22 +1,29 @@
 import os, re, sys
 
-datadir = 'example'  # Path to the current data directory 
-logdir = 'example'  # Path to the data directory used when the tests were launched (often the same as data_dir)
+DATA_PATH = 'example'  # Path to the current data directory 
 
-builddir = 'build'
+# possibly overrides DATA_PATH
+if os.path.exists("datasets.py"):
+    exec(open("datasets.py").read())
+
+BUILD_DIR = 'build'
+
+###
+
+LOG_PATH = DATA_PATH  # Path to the data directory used when the tests were launched (often the same as DATA_PATH)
 
 re_start = 'start\s+([0-9]+.[0-9]+)'
 
 re_title = '==== Command line:'
 
-re_zkr = f'\s*{builddir}\/zuckerli\/pageranker(_pthread)? --verbose=1 --maxiter=([0-9]+) --dampf=([0-9]+.[0-9]+) --topk=([0-9]+) --input_path={logdir}\/(.+).t(.zkr)? --ccount_path={logdir}\/(.+).mtx.ccount(\s*--pardegree=([0-9]+))?'
-re_k2t = f'\s*{builddir}\/k2tree_basic_v0.1\/pagerank(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).t {logdir}\/(.+).mtx.ccount'
-re_k2trd = f'\s*{builddir}\/k2tree_basic_v0.1\/pagerank(_pthread)?_rd -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).t {logdir}\/(.+).mtx.ccount'
-re_k2tgn = f'\s*{builddir}\/matrix_gn\/pagerank_gn(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx'
-re_csrv = f'\s*mm-repair\/pagerank\/csrvpagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx.rowm {logdir}\/(.+).mtx.ccount'
-re_re32 = f'\s*mm-repair\/pagerank\/re32pagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx.rowm {logdir}\/(.+).mtx.ccount'
-re_reiv = f'\s*mm-repair\/pagerank\/reivpagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx.rowm {logdir}\/(.+).mtx.ccount'
-re_re = f'\s*mm-repair\/pagerank\/repagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {logdir}\/(.+).mtx.rowm {logdir}\/(.+).mtx.ccount'
+re_zkr = f'\s*{BUILD_DIR}\/zuckerli\/pageranker(_pthread)? --verbose=1 --maxiter=([0-9]+) --dampf=([0-9]+.[0-9]+) --topk=([0-9]+) --input_path={LOG_PATH}\/(.+).t(.zkr)? --ccount_path={LOG_PATH}\/(.+).mtx.ccount(\s*--pardegree=([0-9]+))?'
+re_k2t = f'\s*{BUILD_DIR}\/k2tree_basic_v0.1\/pagerank(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {LOG_PATH}\/(.+).t {LOG_PATH}\/(.+).mtx.ccount'
+re_k2trd = f'\s*{BUILD_DIR}\/k2tree_basic_v0.1\/pagerank(_pthread)?_rd -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {LOG_PATH}\/(.+).t {LOG_PATH}\/(.+).mtx.ccount'
+re_k2tgn = f'\s*{BUILD_DIR}\/matrix_gn\/pagerank_gn(_pthread)? -v( -b ([0-9]+))? -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {LOG_PATH}\/(.+).mtx'
+re_csrv = f'\s*mm-repair\/pagerank\/csrvpagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {LOG_PATH}\/(.+).mtx.rowm {LOG_PATH}\/(.+).mtx.ccount'
+re_re32 = f'\s*mm-repair\/pagerank\/re32pagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {LOG_PATH}\/(.+).mtx.rowm {LOG_PATH}\/(.+).mtx.ccount'
+re_reiv = f'\s*mm-repair\/pagerank\/reivpagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {LOG_PATH}\/(.+).mtx.rowm {LOG_PATH}\/(.+).mtx.ccount'
+re_re = f'\s*mm-repair\/pagerank\/repagerank -v -b ([0-9]+) -m ([0-9]+) -d ([0-9]+.[0-9]+) -k ([0-9]+) {LOG_PATH}\/(.+).mtx.rowm {LOG_PATH}\/(.+).mtx.ccount'
 
 re_nnodes = 'Number of nodes: ([0-9]+)'
 re_ndangling = 'Number of dandling nodes: ([0-9]+)'
@@ -69,7 +76,14 @@ def main(sep=',') :
         print('Usage is:', sys.argv[0], '<log file path>')
         exit(-1)
 
+    #args
     infilepath = sys.argv[1]
+
+    #params
+    #check file ends with .log extension
+    if infilepath[-4:] != '.log' :
+        print('Error: file must end with .log extension')
+        exit(1)
     outfilepath = infilepath[:-4]+'.csv'
     outfile = open(outfilepath, 'w')
 
@@ -113,10 +127,10 @@ def main(sep=',') :
 
             disk = 0
             if pardegree == 1 :
-                disk += file_size(datadir, f'{dataset}.t.zkr')
+                disk += file_size(DATA_PATH, f'{dataset}.t.zkr')
             else :
                 for tid in range(pardegree) :
-                    disk += file_size(datadir, f'{dataset}.t.{pardegree}.{tid}.zkr')
+                    disk += file_size(DATA_PATH, f'{dataset}.t.{pardegree}.{tid}.zkr')
 
         #k²-tree (UDC) -- rank: disabled
         res = re.search(re_k2trd, line)
@@ -131,10 +145,10 @@ def main(sep=',') :
 
             disk = 0
             if pardegree == 1 :
-                disk += file_size(datadir, f'{dataset}.t.ktrd')
+                disk += file_size(DATA_PATH, f'{dataset}.t.ktrd')
             else :
                 for tid in range(pardegree) :
-                    disk += file_size(datadir, f'{dataset}.t.{pardegree}.{tid}.ktrd')
+                    disk += file_size(DATA_PATH, f'{dataset}.t.{pardegree}.{tid}.ktrd')
 
         #csrv
         res = re.search(re_csrv, line)
@@ -149,10 +163,10 @@ def main(sep=',') :
 
             disk = 0
             if pardegree == 1 :
-                disk += file_size(datadir, f'{dataset}.mtx.rowm.vc')
+                disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.vc')
             else :
                 for tid in range(pardegree) :
-                    disk += file_size(datadir, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc')
+                    disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc')
 
         #re32
         res = re.search(re_re32, line)
@@ -167,12 +181,12 @@ def main(sep=',') :
 
             disk = 0
             if pardegree == 1 :
-                disk += file_size(datadir, f'{dataset}.mtx.rowm.vc.C')
-                disk += file_size(datadir, f'{dataset}.mtx.rowm.vc.R')
+                disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.vc.C')
+                disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.vc.R')
             else :
                 for tid in range(pardegree) :
-                    disk += file_size(datadir, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.C')
-                    disk += file_size(datadir, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.R')
+                    disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.C')
+                    disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.R')
 
         #reiv
         res = re.search(re_reiv, line)
@@ -187,12 +201,12 @@ def main(sep=',') :
 
             disk = 0
             if pardegree == 1 :
-                disk += file_size(datadir, f'{dataset}.mtx.rowm.vc.C.iv')
-                disk += file_size(datadir, f'{dataset}.mtx.rowm.vc.R')
+                disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.vc.C.iv')
+                disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.vc.R')
             else :
                 for tid in range(pardegree) :
-                    disk += file_size(datadir, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.C.iv')
-                    disk += file_size(datadir, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.R')
+                    disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.C.iv')
+                    disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.R')
 
         #re
         res = re.search(re_re, line)
@@ -207,12 +221,12 @@ def main(sep=',') :
 
             disk = 0
             if pardegree == 1 :
-                disk += file_size(datadir, f'{dataset}.mtx.rowm.vc.C.ansf.1')
-                disk += file_size(datadir, f'{dataset}.mtx.rowm.vc.R')
+                disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.vc.C.ansf.1')
+                disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.vc.R')
             else :
                 for tid in range(pardegree) :
-                    disk += file_size(datadir, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.C.ansf.1')
-                    disk += file_size(datadir, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.R')
+                    disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.C.ansf.1')
+                    disk += file_size(DATA_PATH, f'{dataset}.mtx.rowm.{pardegree}.{tid}.vc.R')
 
         res = re.search(re_nnodes, line)
         if res :

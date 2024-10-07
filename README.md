@@ -63,10 +63,14 @@ By default the script compresses the matrix `cnr-2000.mtx` in the `example` dire
 
 Run `pagerank.py` passing as arguments the number of threads: 
 ```sh
-[sudo] python3 pagerank.py 1 8 16
+[sudo] python3 pagerank.py 1 8 16  &> out.log
 ```
-Note: In the background, `pagerank.py` utilizes the `perf` tool to monitor cache accesses, clock cycles, instructions, and more. Typically, this requires executing the script with superuser privileges. To eliminate the need to run `pagerank.py` as a superuser, consider adjusting the `/proc/sys/kernel/perf_event_paranoid` setting to permit access to performance monitoring and observability operations. Lower integer values allow non-superusers to collect more events. To execute `pagerank.py`, you will need to set `perf_event_paranoid` to 0 or a lower value.
-Additionally, please verify the available energy events for RAPL on your machine. You can check the energy events by running either:
+**Note:** In the background, `pagerank.py` utilizes the `perf` tool to monitor cache accesses, clock cycles, instructions, and more. Typically, this requires executing the script with superuser privileges. To eliminate the need to run `pagerank.py` as a superuser, ask your system administrator to adjusti the `/proc/sys/kernel/perf_event_paranoid` setting to 0 with the command
+```sh
+ sudo sh -c 'echo 0 >  /proc/sys/kernel/perf_event_paranoid'
+```
+to permit access to performance monitoring and observability operations to unprivileged users;
+see [this guide](https://www.kernel.org/doc/html/latest/admin-guide/perf-security.html) for further information. Additionally, please verify the available energy events for RAPL on your machine. You can check the energy events by running either:
 ```bash
 ls /sys/bus/event_source/devices/power/events
 ```
@@ -74,19 +78,15 @@ or
 ```bash
 sudo perf list | grep energy
 ```
-
 By default, the script reports `power/energy-pkg/` (energy consumption at the package level) and `power/energy-ram/` (energy used by the RAM). These events were measurable on our machine. However, on other machines, you may find `power/energy-cpu/` (energy consumption at cores level) available. If this is the case, we recommend modifying the `PREAMBLE` global variable in the `pagerank.py` script accordingly.
 
 ### Extracting statistics to a CSV
 
-To extract statistics from the PageRank log, redirect the output of `pagerank.py` to a log.
-```sh
-[sudo] python3 pagerank.py 1 8 16 &> out.log
-```
-Then, run `extract_stats.py` passing the name of the log file as parameter. This will produce a CSV file `out.csv` with metrics extracted from `out.log`.
+To extract statistics from the PageRank log, run `extract_stats.py` passing the name of the log file as parameter:
 ```sh
 python3 extract_stats.py out.log
 ```
+this will produce a CSV file `out.csv` with metrics extracted from `out.log`.
 
 The `out.csv` file contains the following columns:
 

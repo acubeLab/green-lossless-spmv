@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="206.90414mm"
+   height="251.35481mm"
+   viewBox="0 0 206.90414 251.35481"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   inkscape:version="1.3.1 (9b9bdc1480, 2023-11-25, custom)"
+   sodipodi:docname="tutte.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:clip-to-page="false"
+     inkscape:zoom="0.51402139"
+     inkscape:cx="437.72497"
+     inkscape:cy="268.47132"
+     inkscape:window-width="1850"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     inkscape:label="Livello 1"
+     inkscape:groupmode="layer"
+     id="layer1"><g
+       id="g1"
+       transform="matrix(0.26458333,0,0,0.26458333,137.936,167.57)"><g
+         id="Ebene_3">
+	<rect
+   fill="#228b22"
+   width="260.66699"
+   height="316.66699"
+   id="rect1"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9" />
+	<g
+   id="g9">
+		<polygon
+   fill="#ffffff"
+   points="25.096,302.205 32.899,294.213 35.42,297.942 "
+   id="polygon9" />
+	</g>
+</g></g><g
+       id="g2"
+       transform="matrix(0.26458333,0,0,0.26458333,68.968,167.57)"><g
+         id="Ebene_3-3">
+	<rect
+   fill="#273676"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-6"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-7">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-5" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-3" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-5" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-6" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-2" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-9" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-1" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-2" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-7" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-0" />
+	<g
+   id="g9-9">
+		<polygon
+   fill="#ffffff"
+   points="25.096,302.205 32.899,294.213 35.42,297.942 "
+   id="polygon9-3" />
+	</g>
+</g></g><g
+       id="g3"
+       transform="matrix(0.26458333,0,0,0.26458333,0,83.785)"><g
+         id="Ebene_3-6">
+	<rect
+   fill="#9370db"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-0"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-6">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-2" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-6" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-1" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-7" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-92" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-0" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-23" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-75" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-9" />
+	<g
+   id="g9-2">
+		<polygon
+   fill="#ffffff"
+   points="25.096,302.205 32.899,294.213 35.42,297.942 "
+   id="polygon9-2" />
+	</g>
+</g></g><g
+       id="g4"
+       transform="matrix(0.26458333,0,0,0.26458333,0,167.57)"><g
+         id="Ebene_3-8">
+	<rect
+   fill="#2e8b57"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-9"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-73">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-6" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-1" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-2" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-9" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-3" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-1" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-9" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-78" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-4" />
+	<g
+   id="g9-5">
+		<polygon
+   fill="#ffffff"
+   points="25.096,302.205 32.899,294.213 35.42,297.942 "
+   id="polygon9-0" />
+	</g>
+</g></g><g
+       id="g6"
+       transform="matrix(0.26458333,0,0,0.26458333,68.968,83.785)"><g
+         id="Ebene_3-37">
+	<rect
+   fill="#32cd32"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-4"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-5">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-25" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-7" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-3" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-07" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-68" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-8" />
+	<g
+   id="g9-4">
+		<polygon
+   fill="#ffffff"
+   points="35.42,297.942 25.096,302.205 32.899,294.213 "
+   id="polygon9-31" />
+	</g>
+</g></g><g
+       id="g7"
+       transform="scale(0.26458333)"><g
+         id="Ebene_3-4">
+	<rect
+   fill="#66cdaa"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-92"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-06">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-9" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-26" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-64" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-9" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-50" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-48" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-71" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-72" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-7" />
+	<g
+   id="g9-22">
+		<polygon
+   fill="#ffffff"
+   points="35.42,297.942 25.096,302.205 32.899,294.213 "
+   id="polygon9-6" />
+	</g>
+</g></g><g
+       id="g8"
+       transform="matrix(0.26458333,0,0,0.26458333,68.968,0)"><g
+         id="Ebene_3-1">
+	<rect
+   fill="#f08080"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-06"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-1">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-59" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-49" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-09" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-1" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-77" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-11" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-5" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-9" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-77" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-6" />
+	<g
+   id="g9-7">
+		<polygon
+   fill="#ffffff"
+   points="25.096,302.205 32.899,294.213 35.42,297.942 "
+   id="polygon9-36" />
+	</g>
+</g></g><g
+       id="g10"
+       transform="matrix(0.26458333,0,0,0.26458333,137.936,0)"><g
+         id="Ebene_3-5">
+	<rect
+   fill="#3cb371"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-63"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-9">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-12" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-93" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-90" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-5" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-0" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-96" />
+	<g
+   id="g9-3">
+		<polygon
+   fill="#ffffff"
+   points="32.899,294.213 35.42,297.942 25.096,302.205 "
+   id="polygon9-8" />
+	</g>
+</g></g><g
+       id="g11"
+       transform="matrix(0.26458333,0,0,0.26458333,137.936,83.785)"><g
+         id="Ebene_3-56">
+	<rect
+   fill="#008080"
+   width="260.66699"
+   height="316.66699"
+   id="rect1-1"
+   x="0"
+   y="0" />
+</g><g
+         id="Ebene_2-15">
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.654,40.236 c 2.175,88.077 -59.853,190.477 -133.25,257.894"
+   id="path1-9" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,42 c 34,2 80.029,21.45 72.666,63.333 C 226.667,166 169.387,214.738 132.667,234 92,255.333 74.667,282.667 31.334,298"
+   id="path2-84" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 164.667,53.333 c 40,20 62.036,50.848 59.369,90.182"
+   id="path3-8" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 158.754,92.985 c 32.667,30.667 30.579,73.015 28.579,99.682"
+   id="path4-10" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 132.667,234 C 174.667,146 150,120.667 150,120.667"
+   id="path5-30" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="m 151,120.167 c -42,4 -98.922,95.481 -109.589,132.815"
+   id="path6-4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 160,83.333 C 91.333,66.666 60.667,169.333 30.667,190.666"
+   id="path7-4" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 164,42 C 125.333,31.333 68,31.333 26,134"
+   id="path8-44" />
+	<path
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="3"
+   stroke-miterlimit="10"
+   d="M 163.333,41.333 C 128,-12.667 20,11.333 26,150.667 28.926,218.607 57.333,274 31.333,298"
+   id="path9-76" />
+	<line
+   fill="none"
+   stroke="#ffffff"
+   stroke-width="5"
+   stroke-miterlimit="10"
+   x1="165.66701"
+   y1="41.333"
+   x2="176.5"
+   y2="27.167"
+   id="line9-3" />
+	<g
+   id="g9-1">
+		<polygon
+   fill="#ffffff"
+   points="32.899,294.213 35.42,297.942 25.096,302.205 "
+   id="polygon9-7" />
+	</g>
+</g></g></g><metadata
+     id="metadata11"><rdf:RDF><cc:Work
+         rdf:about=""><cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/" /></cc:Work><cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/4.0/"><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Reproduction" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#Distribution" /><cc:requires
+           rdf:resource="http://creativecommons.org/ns#Notice" /><cc:requires
+           rdf:resource="http://creativecommons.org/ns#Attribution" /><cc:permits
+           rdf:resource="http://creativecommons.org/ns#DerivativeWorks" /><cc:requires
+           rdf:resource="http://creativecommons.org/ns#ShareAlike" /></cc:License></rdf:RDF></metadata></svg>

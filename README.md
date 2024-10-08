@@ -1,5 +1,5 @@
 <p align="center">
- <img src="green-lossless-spmv-logo.svg" alt="The Green Lossless SpMV" width="200">
+ <img src="logo.svg" alt="The logo of the project" width="200">
 </p>
 
 The **Green Lossless Sparse Matrix-Vector Multiplication** (SpMV) project focuses on lossless compression techniques optimizing space, time, and energy for multiplications between binary or ternary matrix formats and real-valued vectors.
@@ -119,7 +119,7 @@ The `out.csv` file contains the following columns:
 
 ## License
 
-This project is licensed under the terms of the Apache License 2.0. The logo [`green-lossless-spmv-logo.svg`](./green-lossless-spmv-logo.svg) is a derivative work of the file [Fluent Emoji flat 1f342.svg](https://commons.wikimedia.org/wiki/File:Fluent_Emoji_flat_1f342.svg) distributed under the MIT License.
+This project is licensed under the terms of the Apache License 2.0. The logo [`logo.svg`](./logo.svg) is a derivative work of the file [File:Betelblatt.svg](https://commons.wikimedia.org/wiki/File:Betelblatt.svg) distributed under the same license.
 
 If you use the library please cite the following paper:
 

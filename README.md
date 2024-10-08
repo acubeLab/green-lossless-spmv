@@ -119,7 +119,8 @@ The `out.csv` file contains the following columns:
 
 ## License
 
-This project is licensed under the terms of the Apache License 2.0. The logo [`logo.svg`](./logo.svg) is a derivative work of the file [File:Betelblatt.svg](https://commons.wikimedia.org/wiki/File:Betelblatt.svg) distributed under the same license.
+This project is licensed under the terms of the Apache License 2.0.  
+The logo [`logo.svg`](./logo.svg) is a derivative work based on the file [File:Betelblatt.svg](https://commons.wikimedia.org/wiki/File:Betelblatt.svg), uploaded by the user Furfur on Wikimedia Commons and licensed under CC BY-SA 4.0.
 
 If you use the library please cite the following paper:
 

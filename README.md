@@ -134,6 +134,7 @@ If you use the library please cite the following paper:
       eprint={2409.18620},
       archivePrefix={arXiv},
       primaryClass={cs.DS},
+      doi={10.48550/arXiv.2409.18620},
       url={https://arxiv.org/abs/2409.18620}, 
 }
 ```

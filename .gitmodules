@@ -4,3 +4,6 @@
 [submodule "zuckerli"]
 	path = zuckerli
 	url = https://github.com/ftosoni/zuckerli
+[submodule "mm-repair"]
+	path = mm-repair
+	url = https://gitlab.com/manzai/mm-repair

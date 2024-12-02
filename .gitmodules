@@ -1,9 +1,0 @@
-[submodule "mm-repair"]
-	path = mm-repair
-	url = https://gitlab.com/manzai/mm-repair
-[submodule "zuckerli"]
-	path = zuckerli
-	url = https://github.com/ftosoni/zuckerli
-[submodule "k2tree_basic_v0.1"]
-	path = k2tree_basic_v0.1
-	url = https://github.com/ftosoni/k2tree_basic_v0.1/

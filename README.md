@@ -8,13 +8,28 @@ The **Green Lossless Sparse Matrix-Vector Multiplication** (SpMV) project focuse
 
 ### Prerequisites
 
-Ensure you have the following dependencies installed:
+#### general
+
+* Python version 3.8 or later
 
 ```sh
-sudo apt install clang libgtest-dev libgmock-dev 
+sudo apt install clang g++ gcc cmake
 ```
 
-To install `perf`, run:
+#### mm-repair
+
+* [sdsl-lite](https://github.com/simongog/sdsl-lite) (`git clone https://github.com/simongog/sdsl-lite.git` + 
+`cd sdsl-lite` + `./install.sh`)
+
+* [psutil](https://pypi.org/project/psutil/) (`pip install psutil`)
+
+#### zuckerli
+
+```sh
+sudo apt install libgtest-dev libgmock-dev 
+```
+
+#### perf
 
 ```sh
 sudo apt install linux-tools-common linux-tools-generic linux-tools-`uname -r`

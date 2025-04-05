@@ -139,19 +139,19 @@ The logo [`logo.svg`](./logo.svg) is a derivative work based on the file [File:B
 
 If you use the library please cite the following paper:
 
-> Francesco Tosoni, Philip Bille, Valerio Brunacci, Alessio De Angelis, Paolo Ferragina, and Giovanni Manzini. Toward Greener Matrix Operations by Lossless Compressed Formats. arXiv preprint arXiv:2409.18620, 2024. Available at: https://arxiv.org/abs/2409.18620.
+> F. Tosoni, P. Bille, V. Brunacci, A. d. Angelis, P. Ferragina and G. Manzini, "Toward Greener Matrix Operations by Lossless Compressed Formats," in IEEE Access, vol. 13, pp. 56756-56779, 2025, doi: [10.1109/ACCESS.2025.3555119](https://doi.org/10.1109/ACCESS.2025.3555119). keywords: {Sparse matrices;Energy consumption;Energy efficiency;Software;Vectors;Servers;Internet of Things;Big Data;Meters;Machine learning algorithms;Green computing;lossless compression techniques;compressed matrix formats;matrix-to-vector multiplications;computation-friendly compression;PageRank}, 
 
 ```tex
-@misc{tosoni2024greenermatrixoperationslossless,
-      title={Toward Greener Matrix Operations by Lossless Compressed Formats}, 
-      author={Francesco Tosoni and Philip Bille and Valerio Brunacci and Alessio De Angelis and Paolo Ferragina and Giovanni Manzini},
-      year={2024},
-      eprint={2409.18620},
-      archivePrefix={arXiv},
-      primaryClass={cs.DS},
-      doi={10.48550/arXiv.2409.18620},
-      url={https://arxiv.org/abs/2409.18620}, 
-}
+@ARTICLE{tosoni2024greenermatrixoperationslossless,
+  author={Tosoni, Francesco and Bille, Philip and Brunacci, Valerio and Angelis, Alessio de and Ferragina, Paolo and Manzini, Giovanni},
+  journal={IEEE Access}, 
+  title={Toward Greener Matrix Operations by Lossless Compressed Formats}, 
+  year={2025},
+  volume={13},
+  number={},
+  pages={56756-56779},
+  keywords={Sparse matrices;Energy consumption;Energy efficiency;Software;Vectors;Servers;Internet of Things;Big Data;Meters;Machine learning algorithms;Green computing;lossless compression techniques;compressed matrix formats;matrix-to-vector multiplications;computation-friendly compression;PageRank},
+  doi={10.1109/ACCESS.2025.3555119}}
 ```
 
 ## Acknowledgments
